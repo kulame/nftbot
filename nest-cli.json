@@ -1,0 +1,39 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/nftbot/src",
+  "monorepo": true,
+  "root": "apps/nftbot",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/nftbot/tsconfig.app.json"
+  },
+  "projects": {
+    "nftbot": {
+      "type": "application",
+      "root": "apps/nftbot",
+      "entryFile": "main",
+      "sourceRoot": "apps/nftbot/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nftbot/tsconfig.app.json"
+      }
+    },
+    "cronbot": {
+      "type": "application",
+      "root": "apps/cronbot",
+      "entryFile": "main",
+      "sourceRoot": "apps/cronbot/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/cronbot/tsconfig.app.json"
+      }
+    },
+    "ethereum": {
+      "type": "library",
+      "root": "libs/ethereum",
+      "entryFile": "index",
+      "sourceRoot": "libs/ethereum/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/ethereum/tsconfig.lib.json"
+      }
+    }
+  }
+}
