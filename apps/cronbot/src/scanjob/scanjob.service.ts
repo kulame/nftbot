@@ -8,6 +8,7 @@ export class ScanjobService {
   async getRecentBlock() {
     const number = await this.eth.getRecentBlock();
     console.log(number);
+
     return number;
   }
 }
